@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: whole-dog-python
+  janus-idp.io/tekton: whole-dog-python
+  backstage.io/kubernetes-id: whole-dog-python
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: whole-dog-python
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
